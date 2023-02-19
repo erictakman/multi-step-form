@@ -1,0 +1,14 @@
+---
+import Button from "./Button.astro";
+import Content from "./Content.astro";
+---
+
+<section class="min-w-[540px] flex flex-col justify-between gap-8 py-8 px-24">
+	<Content 
+		heading="Personal info"
+		subheading="Please provide your name, email address, and phone number."
+		labels={["Name", "Email Adress", "Phone Number"]}
+		placeholders={["e.g. Stephen King", "e.g. stephenking@lorem.com", "e.g. +1 234 567 890"]}
+	/>
+	<Button text="Next Step" />
+</section>

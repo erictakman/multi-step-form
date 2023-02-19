@@ -15,11 +15,14 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>Multi-step form - {title}</title>
 	</head>
-	<body>
-		<slot />
+	<body class="flex items-center justify-center h-full w-full">
+		<div class="bg-white rounded-2xl p-4">
+			<slot />
+		</div>
 	</body>
 </html>
 <style is:global>
+
 	@font-face {
 		font-family: "Ubuntu";
 		src: url("./fonts/Ubuntu-Regular.ttf");
@@ -56,7 +59,9 @@ const { title } = Astro.props;
 		font-family: "Ubuntu", sans-serif;
 		font-size: 16px;
 		font-weight: 400;
-		background-color: #F6F6F6;
+		background-color: var(--color-magnolia);
+		height: 100vh;
+		width: 100vw;
 	}
 
 </style>
