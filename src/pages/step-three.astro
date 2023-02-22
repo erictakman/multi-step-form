@@ -1,13 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar.svelte';
+import Main from '../components/Main.svelte';
+
+const currentPage = "/step-three";
+const nextPage = "/step-four";
+const previousPage = "/step-two";
 ---
 
 <Layout title="Step 3">
 	<main>
-		
+		<Sidebar page={currentPage} client:load />
+		<Main 
+			heading="Pick add-ons"
+			subheading="Add-ons help enhance your gaming experience." 
+			currentPage={currentPage}
+			nextPage={nextPage} 
+			previousPage={previousPage}
+			/>
 	</main>
 </Layout>
 
 <style>
-	
+	main {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 1rem;
+	}
 </style>

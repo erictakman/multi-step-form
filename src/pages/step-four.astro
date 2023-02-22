@@ -1,13 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar.svelte';
+import Main from '../components/Main.svelte';
+
+const currentPage = "/step-four";
+const nextPage = "/step-five";
+const previousPage = "/step-three";
 ---
 
 <Layout title="Step 4">
 	<main>
-		
+		<Sidebar page={currentPage} client:load />
+		<Main 
+			heading="Finishing up"
+			subheading="Double-check everything looks OK before confirming." 
+			currentPage={currentPage}
+			nextPage={nextPage} 
+			previousPage={previousPage}
+			/>
 	</main>
 </Layout>
 
 <style>
-	
+	main {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 1rem;
+	}
 </style>

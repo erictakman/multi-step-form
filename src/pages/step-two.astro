@@ -1,13 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Sidebar from '../components/Sidebar.svelte';
+import Main from '../components/Main.svelte';
+
+const currentPage = "/step-two";
+const nextPage = "/step-three";
+const previousPage = "/";
 ---
 
 <Layout title="Step 2">
 	<main>
-		
+		<Sidebar page={currentPage} client:load />
+		<Main 
+			heading="Select plan"
+			subheading="You have the option of monthly or yearly billing." 
+			currentPage={currentPage}
+			nextPage={nextPage} 
+			previousPage={previousPage}
+			/>
 	</main>
 </Layout>
 
 <style>
-	
+	main {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 1rem;
+	}
 </style>

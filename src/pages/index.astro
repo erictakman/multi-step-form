@@ -1,13 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Sidebar from '../components/Sidebar.astro';
-import Main from '../components/Main.astro';
+import Sidebar from '../components/Sidebar.svelte';
+import Main from '../components/Main.svelte';
+
+const currentPage = "/";
+const nextPage = "/step-two";
+const previousPage = "";
 ---
 
 <Layout title="Step 1">
 	<main>
-		<Sidebar />
-		<Main />
+		<Sidebar page={currentPage} client:load />
+		<Main 
+			heading="Personal info"
+			subheading="Please provide your name, email address, and phone number." 
+			currentPage={currentPage}
+			nextPage={nextPage} 
+			previousPage={previousPage}
+			/>
 	</main>
 </Layout>
 

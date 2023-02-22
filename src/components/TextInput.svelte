@@ -1,11 +1,7 @@
----
-export interface Props {
-	label: string;
-	placeholder: string;
-}
-
-const {label, placeholder} = Astro.props;
----
+<script>
+	export let label, placeholder;
+	
+</script>
 
 <div class="flex flex-col gap-1">
 	<label class="text-[var(--color-marine-blue)] font-[500]" for="input">{label}</label>
