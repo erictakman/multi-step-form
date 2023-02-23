@@ -16,9 +16,9 @@ const { title } = Astro.props;
 		<title>Multi-step form - {title}</title>
 	</head>
 	<body class="flex items-center justify-center h-full w-full">
-		<div class="bg-white rounded-2xl p-4">
-			<slot />
-		</div>
+		<main class="bg-white rounded-2xl p-4">
+				<slot />
+		</main>
 	</body>
 </html>
 <style is:global>
@@ -62,6 +62,12 @@ const { title } = Astro.props;
 		background-color: var(--color-magnolia);
 		height: 100vh;
 		width: 100vw;
+	}
+
+	main {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 1rem;
 	}
 
 </style>

@@ -9,7 +9,7 @@ const previousPage = "/step-two";
 ---
 
 <Layout title="Step 3">
-	<main>
+
 		<Sidebar page={currentPage} client:load />
 		<Main 
 			heading="Pick add-ons"
@@ -18,13 +18,6 @@ const previousPage = "/step-two";
 			nextPage={nextPage} 
 			previousPage={previousPage}
 			/>
-	</main>
+
 </Layout>
 
-<style>
-	main {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		gap: 1rem;
-	}
-</style>

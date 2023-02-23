@@ -9,7 +9,7 @@ const previousPage = "/";
 ---
 
 <Layout title="Step 2">
-	<main>
+
 		<Sidebar page={currentPage} client:load />
 		<Main 
 			heading="Select plan"
@@ -18,13 +18,6 @@ const previousPage = "/";
 			nextPage={nextPage} 
 			previousPage={previousPage}
 			/>
-	</main>
+
 </Layout>
 
-<style>
-	main {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		gap: 1rem;
-	}
-</style>

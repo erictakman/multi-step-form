@@ -7,20 +7,13 @@ const previousPage = "/step-four";
 ---
 
 <Layout title="Step 5">
-	<main>
+
 		<Sidebar page={previousPage} client:load />
 		<ThankYou
 			heading="Thank you!"
 			subheading="Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com." 
 			previousPage={previousPage}
 		/>
-	</main>
+
 </Layout>
 
-<style>
-	main {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		gap: 1rem;
-	}
-</style>
