@@ -4,8 +4,6 @@
 	export let steps, page;
 
 	let stepGroup = page;
-
-	console.log(stepGroup);
 	
 </script>
 
