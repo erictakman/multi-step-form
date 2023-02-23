@@ -1,5 +1,8 @@
 <script>
 	import InputForm from "./InputForm.svelte";
+	import Plan from "./Plan.svelte";
+	import AddOns from "./AddOns.svelte";
+	import Summary from "./Summary.svelte";
 
 	export let heading, subheading, currentPage;
 	
@@ -13,11 +16,11 @@
 	{#if currentPage === "/"}
 		<InputForm />
 	{:else if currentPage === "/step-two"}
-		<!-- TODO: Add component for plan -->
+		<Plan />
 	{:else if currentPage === "/step-three"}
-		<!-- TODO: Add component for add-ons -->
+		<AddOns />
 	{:else if currentPage === "/step-four"}
-		<!-- TODO: Add component for summary -->
+		<Summary />
 	{/if}
 	
 </section>
